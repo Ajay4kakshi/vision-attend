@@ -20,6 +20,7 @@ import ReportsPage from "@/pages/shared/ReportsPage";
 import NotificationsPage from "@/pages/shared/NotificationsPage";
 import SettingsPage from "@/pages/shared/SettingsPage";
 import NotFound from "@/pages/NotFound";
+import BabuSwamiPage from "@/pages/BabuSwamiPage";
 
 const queryClient = new QueryClient();
 
@@ -31,7 +32,8 @@ const App = () => (
       <BrowserRouter>
         <AuthProvider>
           <Routes>
-            <Route path="/" element={<Navigate to="/login" replace />} />
+            <Route path="/" element={<Navigate to="/babu-swami" replace />} />
+            <Route path="/babu-swami" element={<BabuSwamiPage />} />
             <Route path="/login" element={<LoginPage />} />
 
             {/* Teacher Routes */}
